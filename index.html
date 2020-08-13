@@ -3,18 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Righteous&display=swap" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
   <link href="./favicon.ico" rel="icon" type="image/ico">
   <title>Tech and Games</title>
 </head>
 <body>
-
-  <!-- Delete this -->
-  <div style="margin: 3rem; text-align: center">
-    <h1 style="margin: 3rem">Tech and Games</h1>
-  </div>
-  <!-- Delete this -->
-
-  <script type="module" src="./app.js"></script>
+  <header>
+    <img src="assets/logo.png" alt="Tech and Games">
+  </header>
+  <section class="cover">
+    <div class="video-container">
+      <video controls autoplay muted loop preload="metadata">
+      <source src="assets/bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div> 
+    <div class="cover-text">
+      <h1>Tech and Games</h1>
+      <h3>Content creators showcasing video games and technology</h3>
+    </div>
+  </section>  
+  <footer id="links">
+    <a class="twitch" href="https://twitch.tv/techandgames" target="_blank">Twitch >>></a>
+    <a class="youtube" href="https://www.youtube.com/channel/UCn7jg_cslSkl2FBv7la6XWg" target="_blank">YouTube >>></a>
+  </footer>
 </body>
 </html>

@@ -1,62 +1,147 @@
 :root {
-  --color-primary: rgb(200, 200, 200);
-  --color-link: rgb(250, 250, 250);
-  --color-hover: rgb(225, 225, 225);
-  --bg-primary: rgb(20, 20, 20);
-  --bg-secondary: rgb(25, 25, 25);
-  --font-size: 1.6rem;
-  --font-family: -apple-system, BlinkMacSystemFont, Avenir, "Avenir Next", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --primary-color: #001a33;
 }
+/* Root scope custom property for a primary color */
 
-html {
-  -webkit-box-sizing: border-box;
+* {
   box-sizing: border-box;
-  font-size: 62.5%;
-  line-height: 1.15;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%
-}
-
-*, :after, :before {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit
 }
+/* border-box tells the browser to account for any border and padding in the values you specify for an element's width and height. */
 
 body {
-  background-color: var(--bg-primary);
-  line-height: 1.6;
-  font-size: var(--font-size);
-  color: var(--color-primary);
-  font-family: var(--font-family);
+  font-family: 'Lato', sans-serif;
+  line-heignt: 1.25;
+  font-size: 16px;
 }
-
-h1, h2, h3, h4, h5, h6 { 
-  font-weight: normal; 
+a {
+  text-decoration: none;
 }
-
-h1 { font-size: 2em }
-h2 { font-size: 1.75em }
-h3 { font-size: 1.5em }
-h4 { font-size: 1.25em }
-h5 { font-size: 1em }
-h6 { font-size: .85em }
-
-a { 
-  color: var(--color-link);
-  text-decoration: none
+h1 {
+  font-family: 'Righteous', sans-serif;
+  font-size: 8vw;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 1.25%;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(left, #00a8ff, #02ff17);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
-a:hover:not(.button) {
-  color: var(--color-hover);
-  opacity: .75
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-top: 3%;
 }
-
-button {
-  font-family: inherit
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
 }
-
-p {
-  margin-top: 0
+header img {
+  max-height: 5rem;
+}
+.cover {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  color: white;
+}
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--primary-color);
+}
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.video-container:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 5, .75);
+}
+.cover-text {
+  z-index: 9;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background: rgba(0, 0, 15, .9);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 90%;
+  font-weight: 100;
+  margin-top: 3%;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background: rgba(0, 0, 15, .9);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 90%;
+  font-weight: 100;
+  margin-top: 0%;
+}
+.btn:hover {
+  transform: scale(.98);
+  background: rgba(0, 0, 12, 1);
+}
+#links {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (max-width: 414px) {
+  #links {
+    padding: 4%;
+    text-align: center;
+  }
+}
+#links a {
+  font-family: 'Righteous', sans-serif;
+  font-weight: 150;
+  font-size: 5vw;
+  margin-bottom: 5%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background 250ms linear;
+}
+.twitch {
+  background: -webkit-linear-gradient(left, #A463F2, transparent);
+}
+.twitch:hover {
+  background: -webkit-linear-gradient(left, #A463F2, #fff);
+}
+.youtube {
+  background: -webkit-linear-gradient(left, #FF4136, transparent);
+}
+.youtube:hover {
+  background: -webkit-linear-gradient(left, #FF4136, #fff);
 }

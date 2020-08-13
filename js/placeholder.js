@@ -1,1 +1,0 @@
-console.log('FFS was a success')
